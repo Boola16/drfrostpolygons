@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Dr Frost Maths</title>
+	</head>
+	
+	<body bgcolor = "white">
+		<button id="unlockScrollBtn" style="width: 100%; height: 10px; background-color: white; border: 1px solid white;"> </button>
+
+    <script>
+        // Function to disable scrolling
+        function disableScroll() {
+            window.scrollTo(0, 0); // Keep at top
+            window.addEventListener('scroll', lockScroll);
+        }
+
+        // Function to lock scroll position
+        function lockScroll() {
+            window.scrollTo(0, 0);
+        }
+
+        // Function to enable scrolling
+        function enableScroll() {
+            window.removeEventListener('scroll', lockScroll);
+        }
+
+        // Initially disable scrolling
+        disableScroll();
+
+        // When button is clicked, enable scrolling
+        document.getElementById('unlockScrollBtn').addEventListener('click', enableScroll);
+    </script>
+		<iframe style="max-width:100%" src="https://www.drfrost.org" width="1750" height="900" frameborder="0" allowfullscreen></iframe>
+		<iframe style="max-width:100%" src="https://www.kodub.com/apps/polytrack" width="1750" height="700" frameborder="0" allowfullscreen></iframe>
+	</body>
+</html>
